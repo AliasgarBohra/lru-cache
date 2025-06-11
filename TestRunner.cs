@@ -6,7 +6,7 @@ public static class TestLRU
 {
     public static void Main()
     {
-        Console.WriteLine("=== LRU Cache Test Suite ===\n");
+        Console.WriteLine("LRU Cache Test\n");
 
         var cache = new LruCache<string, string>(
             capacity: 1000,
@@ -28,7 +28,7 @@ public static class TestLRU
         Console.WriteLine($"  Expired:        {stats.ExpiredRemovals}");
         Console.WriteLine($"  Current Size:   {stats.CurrentSize}");
 
-        Console.WriteLine("\n[TEST] Done. Disposing...");
+        Console.WriteLine("\n[TEST] Done.");
         cache.Dispose();
     }
 

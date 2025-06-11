@@ -10,7 +10,7 @@ It supports:
 
 ---
 
-## 📦 Features
+## Features
 
 * LRU eviction on capacity overflow
 * TTL expiration per entry (optional)
@@ -20,7 +20,7 @@ It supports:
 
 ---
 
-## ▶️ How to Run
+## How to Run
 
 ### 1. Clone the Repo or Copy Files
 
@@ -32,20 +32,19 @@ Just copy these files into a `.NET Console App`:
 
 ### 2. Compile and Run (with .NET CLI)
 
-```bash
 dotnet build
 dotnet run
 ```
 
 ---
 
-## 📚 Dependencies
+## Dependencies
 
 * [.NET 6.0 SDK or later](https://dotnet.microsoft.com/en-us/download)
 
 ---
 
-## 🧹 Design Decisions
+## Design Decisions
 
 * **Generic Support**: Cache works for any non-nullable key type and any value type.
 * **TTL Handling**: TTL is applied per item, either using a default or explicitly passed value.
@@ -55,7 +54,7 @@ dotnet run
 
 ---
 
-## 🔁 Concurrency Model
+## Concurrency Model
 
 * Uses `ReaderWriterLockSlim` to handle concurrent reads/writes:
 
@@ -66,7 +65,7 @@ dotnet run
 
 ---
 
-## ♻️ Eviction Logic
+## Eviction Logic
 
 When `capacity` is exceeded:
 
@@ -80,10 +79,10 @@ Additionally, expired items are cleaned up:
 
 ---
 
-## 📊 Sample Output
+## Sample Output
 
 ```
-=== LRU Cache Test Suite ===
+LRU Cache Test
 
 [TEST] Basic Operations
   db_host: localhost:5432
@@ -93,7 +92,6 @@ Additionally, expired items are cleaned up:
   db_host was evicted: Key 'config:db_host' not in cache.
 
 [TEST] Expiration
-  Sleeping for 3 seconds...
   temp_data expired: Cache entry for 'temp_data' expired.
 
 [TEST] Concurrent Access
@@ -112,7 +110,7 @@ Additionally, expired items are cleaned up:
 
 ---
 
-## 🚀 Performance Considerations
+## Performance Considerations
 
 * Suitable for high-read scenarios due to `ReaderWriterLockSlim` optimizations.
 * LRU list maintains O(1) access for add/remove/move operations.
