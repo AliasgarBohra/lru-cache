@@ -1,0 +1,40 @@
+# .NET build artifacts
+bin/
+obj/
+out/
+
+# Visual Studio user-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# VS Code settings
+.vscode/
+
+# ASP.NET secrets
+secrets.json
+
+# Dotnet watch
+*.dotnetwatch.json
+
+# Logs
+*.log
+
+# Auto-generated files
+Generated_Code/
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# Other
+*.DS_Store
+Thumbs.db
