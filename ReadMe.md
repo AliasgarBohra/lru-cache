@@ -1,4 +1,4 @@
-# 🧠 LRU Cache with TTL, Eviction & Stats (C#)
+# LRU Cache with TTL, Eviction & Stats (C#)
 
 This is a thread-safe, generic **Least Recently Used (LRU) cache** in C#.
 It supports:
